@@ -1,6 +1,6 @@
 const CACHE_APP = "Weather Cat Cahe";
-const PATH = "/weathercat/";
-const URLS_CACHE_APP = [PATH, PATH+"/index.html", PATH+"/garrux.svg", PATH+"/assets/*"];
+
+const URLS_CACHE_APP = ["/index.html", "/garrux.svg", "/assets/*"];
 
 self.addEventListener("install", (event) => {
 	event.waitUntil(
