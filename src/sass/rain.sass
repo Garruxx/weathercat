@@ -1,0 +1,36 @@
+#rain
+    transition: .6s
+    position: absolute
+    bottom: -300%
+    opacity: .3
+    width: 100%
+
+body
+    #rain path
+        fill: #3d436849
+
+body[climate="rain"], body[climate="thunderStrom"]
+
+    #rain
+        position: absolute
+        top: 80px
+        animation: rain .17s infinite linear
+        z-index: -1
+        background: url(/Rain.svg)
+
+body[climate="littleRain"]
+    #rain
+        position: absolute
+        top: 80px
+        animation: rain .4s infinite linear
+        z-index: -1
+        background: url(/littleRain.svg)
+
+        path:nth-of-type(odd)
+            opacity: 0
+
+@keyframes rain
+    from
+        transform: translateY(0px)
+    to
+        transform: translateY(41.41px)

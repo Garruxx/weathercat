@@ -1,0 +1,24 @@
+.sun
+    position: absolute
+    transition: .5s opacity
+    opacity: 0
+    top: 23px
+    left: 20px
+    width: 30%
+    z-index: -1
+
+body.day
+    .sun
+        opacity: 1
+
+body.day[climate="cloudy"]
+    .sun 
+        opacity: .8
+        
+body.day[climate="littleRain"]
+    .sun 
+        opacity: .6
+
+body.day[climate="rain"], body.day[climate="thunderStrom"]
+    .sun
+        opacity: 0

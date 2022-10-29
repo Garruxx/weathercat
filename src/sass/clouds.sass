@@ -1,0 +1,62 @@
+.clouds
+    transition: .6s transform
+    top: 10px
+    position: absolute
+    width: 100%
+    *
+        overflow: visible
+    #clouds
+        .cloud
+            opacity: .8
+            transition: .5s transform
+            transform: translateX(-100%)
+
+body.night
+    .clouds #clouds *
+        fill: #2b2d37
+
+body.day
+    .clouds #clouds *
+        fill: #e1e3ee
+
+body.day[climate="rain"], body.day[climate="thunderStrom"]
+    .clouds #clouds *
+        fill: #89898A
+
+body[climate="cloudy"], body[climate="partlyCloudy"]
+
+    #clouds .cloud
+        transform: translateX(0)
+        animation-timing-function: cubic-bezier(0,.1,1,.4)
+        animation-iteration-count: infinite
+        animation-name: clouds
+        animation-duration: 22s
+
+        &:nth-child(2)
+            animation-timing-function: cubic-bezier(0,.9,.8,.5)
+            animation-duration: 13s
+
+        &:nth-child(3)
+            animation-timing-function: cubic-bezier(0,.5,1,.4)
+            animation-duration: 16s
+
+        &:nth-child(5)
+            animation-timing-function: cubic-bezier(0,.7,.6,.4)
+            animation-duration: 19s
+
+body[climate="rain"], body[climate="thunderStrom"], body[climate="littleRain"]
+    #clouds
+        .cloud
+            transform: translateX(0px)
+
+body[climate="partlyCloudy"]
+    #clouds
+        #cloud1, #cloud5, #cloud3, #cloud2
+            opacity: 0
+
+@keyframes clouds
+    from
+        transform: translateX(100%) translateY(51px)
+
+    to
+        transform: translateX(-100%) translateY(0px)

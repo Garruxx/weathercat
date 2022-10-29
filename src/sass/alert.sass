@@ -1,0 +1,45 @@
+#alert
+    position: absolute
+    transition: .5s bottom
+    bottom: -100%
+    width: calc(100% - 22px)
+    height: 250px
+    height: auto
+    background: #202130
+    padding: 11px
+    color: #fff
+    overflow: hidden
+    font-weight: 400
+    font-size: 14px
+    border-radius: 7px 7px 0 0
+    box-shadow: 0px 3px 9px #fff
+
+    &.visible
+        bottom: 0
+
+    .actions
+        width: 100%
+        display: flex
+        flex-wrap: nowrap
+        justify-content: space-between
+        margin: 12px 0
+
+        .label, input[type="button"]
+            font-weight: 500
+
+        .buttons
+            display: flex
+            align-items: center
+
+            input[type="button"]
+                margin: 0 4px
+                background: #343854
+                color: #fff
+                border: 1px solid #343854
+                padding: 3px 22px 5px 22px
+                border-radius: 17px
+                cursor: pointer
+
+                &:hover
+                    transition: .3s
+                    background: #0000

@@ -1,0 +1,14 @@
+svg #stars
+    transition: .5s opacity steps(1)
+
+body[climate="cloudy"], body[climate="littleRain"]
+    svg #stars
+        opacity: .05
+
+body[climate="partlyCloudy"]
+    svg #stars
+        opacity: .5
+
+body.day, body[climate="thunderStrom"],  body[climate="rain"]
+    svg #stars
+        opacity: 0

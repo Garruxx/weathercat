@@ -1,0 +1,14 @@
+#moon
+    transition: .35s opacity
+    
+body[climate="rain"]
+    #moon
+        opacity: .03
+
+body[climate="littleRain"]
+    #moon
+        opacity: .07
+
+body.day, body[climate="thunderStrom"]
+    #moon
+        opacity: 0

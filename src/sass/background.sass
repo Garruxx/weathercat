@@ -1,0 +1,69 @@
+#container
+    overflow: hidden
+    position: relative
+    background: linear-gradient(-157deg, #5553565d, #342d4d69)
+    box-shadow: 0px 0px 10px #e4e3e362
+    border-radius: 15px
+    height: 95%
+    width: 375px
+    max-width: calc(100% - 6px)
+    max-height: 722px
+    z-index: 4
+
+body.day
+    .clockContainer#container
+        background: linear-gradient(133deg, #a3a7b5, #f7f7f7eb)
+
+body.day[climate="rain"]
+    .clockContainer#container
+        background: linear-gradient(to bottom, #bebec9bf, #bbb8bfeb)
+
+body.day[climate="littleRain"]
+    .clockContainer#container
+        background: linear-gradient(133deg, #a3a7b5, #f7f7f7eb)
+
+body.day[climate="thunderStrom"]
+    .clockContainer#container
+
+        animation: thunderStromDay 5s infinite !important
+
+body.night[climate="thunderStrom"]
+    .clockContainer#container
+
+        animation: thunderStromNight 5s infinite !important
+
+@keyframes thunderStromDay
+    0%, 1%
+        background: #ffffff
+
+    2%, 4%
+        background: linear-gradient(to top, #8b829598, #4d4c4feb)
+
+    6%, 7%
+        background: #ffffff
+
+    7%, 100%
+        background: linear-gradient(to top, #8b829598, #4d4c4feb)
+
+@keyframes thunderStromNight
+    0%, 1%
+        background: #ffffff
+
+    2%, 4%
+        background: #202130
+
+    6%, 7%
+        background: #ffffff
+
+    7%, 100%
+        background: #202130
+
+@media (orientation: portrait)
+    #container
+        width: 100%
+        max-width: 100%
+        height: 100%
+        max-height: 100%
+        border: none
+        box-shadow: none
+        border-radius: 0
