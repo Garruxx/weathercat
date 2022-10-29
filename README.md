@@ -1,8 +1,8 @@
-## GarrClock
+## Weather Cat
 
 ### try it in the following link
 
-[GarrClock](https://garruxx.github.io/garrClock/)
+[Weather Cat](https://garruxx.github.io/weathercat/)
 
 This is a simple analog and digital clock with the ability to show you in a very visual way the state of your weather.
 
